@@ -1,4 +1,3 @@
-
 //1
 console.log("Hello WOrld");
 // 2
@@ -23,7 +22,7 @@ if (5 > 3) console.log("yes");
 
 //6
 function calculatearea(rad: any): any {
-	const pi = 2.7143;
+	const pi = 3.14;
 	let area = pi * rad * 2;
 	return area;
 }
@@ -113,7 +112,7 @@ function reverse(g: number[]): number[] {
 console.log(reverse([1, 2, 3, 4]));
 
 //15
-let scores=[10, 5, 20, 20, 4, 5, 2, 25, 1]
+let scores = [10, 5, 20, 20, 4, 5, 2, 25, 1];
 let maxLimit = 20;
 let minLimit = 5;
 let countExceedMax = 0;
@@ -128,8 +127,12 @@ for (let i = 0; i < scores.length; i++) {
 	}
 }
 
-console.log(`Number of times the score exceeds the maximum limit: ${countExceedMax}`);
-console.log(`Number of times the score exceeds the minimum limit: ${countExceedMin}`);
+console.log(
+	`Number of times the score exceeds the maximum limit: ${countExceedMax}`
+);
+console.log(
+	`Number of times the score exceeds the minimum limit: ${countExceedMin}`
+);
 
 //16
 function removeFalseyValues(arr: any[]): any[] {
@@ -147,3 +150,37 @@ const concatenatedArray = arr.concat(arr1);
 console.log(concatenatedArray);
 
 //18
+function sumOfElements(arr: number[]): number {
+	let sum = 0;
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i] % 2 === 0) {
+			sum += arr[i];
+		}
+		if (arr[i] % 2 !== 0) {
+			sum += arr[i];
+		}
+	}
+	return sum;
+}
+console.log(sumOfElements([3, 5, 6, 8, 7, 9]));
+
+//19
+function elementExists(elements: any[], element: any): number {
+	return elements.indexOf(element);
+}
+console.log(elementExists([1, 2, 3, 4, 5], 3));
+
+//20
+function returnsmall(intarray: number[]): number {
+	let small = intarray[0];
+	for (let i = 0; i < intarray.length; i++) {
+		if (intarray[i] < small) {
+			small = intarray[i];
+		}
+	}
+	return small;
+}
+
+console.log(returnsmall([5, 4, 3, 2, 1]));
+
+//21
